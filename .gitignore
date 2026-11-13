@@ -33,3 +33,6 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# 本地运行截图（用于实验报告，不提交到仓库）
+/screenshots/

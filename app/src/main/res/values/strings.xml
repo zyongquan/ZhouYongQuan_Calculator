@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">计算器</string>
+    <string name="main_title">周勇权 2024180750</string>
+    <string name="history_title">历史记录</string>
+    <string name="menu_history">历史</string>
+    <string name="label_first_number">第一个数</string>
+    <string name="label_second_number">第二个数</string>
+    <string name="label_operator">运算符</string>
+    <string name="label_result">结果</string>
+    <string name="hint_number">请输入数字</string>
+    <string name="operator_add">+</string>
+    <string name="operator_subtract">−</string>
+    <string name="operator_multiply">×</string>
+    <string name="operator_divide">÷</string>
+    <string name="btn_calculate">计算</string>
+    <string name="result_placeholder">—</string>
+    <string name="empty_history">暂无历史记录，先去算一题吧</string>
+    <string name="error_number">请输入有效数字</string>
+    <string name="error_operator">请选择运算符</string>
+    <string name="error_divide_by_zero">除数不能为 0</string>
+</resources>

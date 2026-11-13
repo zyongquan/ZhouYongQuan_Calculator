@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 横屏布局：左右分栏、输入框并排，保证结果与按钮在横屏时都可见。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_surface"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="2dp"
+        app:title="@string/main_title"
+        app:titleTextColor="@color/red_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/label_first_number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/firstInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:textColor="@color/red_dark"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:hint="@string/label_second_number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/secondInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:textColor="@color/red_dark"
+                        android:textSize="18sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_operator"
+                android:textColor="@color/red_text"
+                android:textSize="14sp" />
+
+            <RadioGroup
+                android:id="@+id/operatorGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/opAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/operator_add"
+                    android:textColor="@color/red_dark"
+                    android:textSize="18sp"
+                    app:buttonTint="@color/red_primary" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/opSubtract"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/operator_subtract"
+                    android:textColor="@color/red_dark"
+                    android:textSize="18sp"
+                    app:buttonTint="@color/red_primary" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/opMultiply"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/operator_multiply"
+                    android:textColor="@color/red_dark"
+                    android:textSize="18sp"
+                    app:buttonTint="@color/red_primary" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/opDivide"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/operator_divide"
+                    android:textColor="@color/red_dark"
+                    android:textSize="18sp"
+                    app:buttonTint="@color/red_primary" />
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/calculateButton"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/btn_calculate"
+                android:textSize="16sp"
+                app:cornerRadius="22dp" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/red_border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_result"
+                    android:textColor="@color/red_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/resultText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:breakStrategy="simple"
+                    android:gravity="center_vertical"
+                    android:text="@string/result_placeholder"
+                    android:textColor="@color/red_dark"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</LinearLayout>
