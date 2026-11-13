@@ -2,16 +2,17 @@ package com.example.zhouyongquan_calculator
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
 
 /**
- * 第二个 Activity：用于展示计算历史记录。
- *
- * 当前版本先提供页面入口与标题栏，历史列表将在后续提交中用 RecyclerView 实现。
+ * 第二个 Activity：使用 RecyclerView 展示曾经执行过的计算历史。
  */
 class HistoryActivity : AppCompatActivity() {
 
@@ -20,8 +21,10 @@ class HistoryActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_history)
 
+        HistoryStore.init(this)
         applyWindowInsets()
         setUpToolbar()
+        bindList()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -46,5 +49,18 @@ class HistoryActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         toolbar.title = getString(R.string.history_title)
+    }
+
+    private fun bindList() {
+        val records = HistoryStore.all()
+        val recyclerView = findViewById<RecyclerView>(R.id.historyList)
+        val emptyView = findViewById<View>(R.id.emptyHistory)
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = HistoryAdapter().apply { submitList(records) }
+
+        val isEmpty = records.isEmpty()
+        emptyView.visibility = if (isEmpty) View.VISIBLE else View.GONE
+        recyclerView.visibility = if (isEmpty) View.GONE else View.VISIBLE
     }
 }

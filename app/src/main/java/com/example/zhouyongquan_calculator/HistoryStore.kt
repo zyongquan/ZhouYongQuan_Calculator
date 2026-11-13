@@ -42,7 +42,7 @@ object HistoryStore {
         list.forEach { record ->
             val item = JSONObject()
             item.put("first", record.first)
-            item.put("operator", record.operator.code)
+            item.put("operator", record.operator.toString())
             item.put("second", record.second)
             item.put("result", record.result)
             item.put("time", record.time)
