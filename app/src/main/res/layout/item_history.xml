@@ -10,7 +10,7 @@
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="12dp"
     app:cardElevation="0dp"
-    app:strokeColor="@color/red_border"
+    app:strokeColor="@color/border_gray"
     app:strokeWidth="1dp">
 
     <LinearLayout
@@ -23,7 +23,7 @@
             android:id="@+id/itemExpression"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/red_dark"
+            android:textColor="@color/text_red_dark"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:textColor="@color/red_hint"
+            android:textColor="@color/text_red_light"
             android:textSize="12sp" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

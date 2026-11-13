@@ -5,7 +5,7 @@
     android:id="@+id/historyRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red_surface"
+    android:background="@color/page_background"
     android:orientation="vertical"
     tools:context=".HistoryActivity">
 
@@ -16,7 +16,7 @@
         android:background="@color/white"
         android:elevation="2dp"
         app:title="@string/history_title"
-        app:titleTextColor="@color/red_dark" />
+        app:titleTextColor="@color/text_red_dark" />
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/empty_history"
-            android:textColor="@color/red_text"
+            android:textColor="@color/text_red"
             android:textSize="16sp"
             android:visibility="gone" />
     </FrameLayout>

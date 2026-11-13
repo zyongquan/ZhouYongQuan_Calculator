@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/red_surface"
+    android:background="@color/page_background"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -17,7 +17,7 @@
         android:background="@color/white"
         android:elevation="2dp"
         app:title="@string/main_title"
-        app:titleTextColor="@color/red_dark" />
+        app:titleTextColor="@color/text_red_dark" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                         android:imeOptions="actionNext"
                         android:inputType="numberDecimal|numberSigned"
                         android:maxLines="1"
-                        android:textColor="@color/red_dark"
+                        android:textColor="@color/text_red_dark"
                         android:textSize="18sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +70,7 @@
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal|numberSigned"
                         android:maxLines="1"
-                        android:textColor="@color/red_dark"
+                        android:textColor="@color/text_red_dark"
                         android:textSize="18sp" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/label_operator"
-                android:textColor="@color/red_text"
+                android:textColor="@color/text_red"
                 android:textSize="14sp" />
 
             <RadioGroup
@@ -97,9 +97,9 @@
                     android:checked="true"
                     android:gravity="center"
                     android:text="@string/operator_add"
-                    android:textColor="@color/red_dark"
+                    android:textColor="@color/text_red_dark"
                     android:textSize="18sp"
-                    app:buttonTint="@color/red_primary" />
+                    app:buttonTint="@color/control_gray" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/opSubtract"
@@ -108,9 +108,9 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/operator_subtract"
-                    android:textColor="@color/red_dark"
+                    android:textColor="@color/text_red_dark"
                     android:textSize="18sp"
-                    app:buttonTint="@color/red_primary" />
+                    app:buttonTint="@color/control_gray" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/opMultiply"
@@ -119,9 +119,9 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/operator_multiply"
-                    android:textColor="@color/red_dark"
+                    android:textColor="@color/text_red_dark"
                     android:textSize="18sp"
-                    app:buttonTint="@color/red_primary" />
+                    app:buttonTint="@color/control_gray" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
                     android:id="@+id/opDivide"
@@ -130,9 +130,9 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="@string/operator_divide"
-                    android:textColor="@color/red_dark"
+                    android:textColor="@color/text_red_dark"
                     android:textSize="18sp"
-                    app:buttonTint="@color/red_primary" />
+                    app:buttonTint="@color/control_gray" />
             </RadioGroup>
 
             <com.google.android.material.button.MaterialButton
@@ -142,6 +142,7 @@
                 android:layout_height="44dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/btn_calculate"
+                android:textColor="@color/text_red_dark"
                 android:textSize="16sp"
                 app:cornerRadius="22dp" />
         </LinearLayout>
@@ -154,7 +155,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="16dp"
             app:cardElevation="0dp"
-            app:strokeColor="@color/red_border"
+            app:strokeColor="@color/border_gray"
             app:strokeWidth="1dp">
 
             <LinearLayout
@@ -168,7 +169,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/label_result"
-                    android:textColor="@color/red_text"
+                    android:textColor="@color/text_red"
                     android:textSize="14sp" />
 
                 <TextView
@@ -179,7 +180,7 @@
                     android:breakStrategy="simple"
                     android:gravity="center_vertical"
                     android:text="@string/result_placeholder"
-                    android:textColor="@color/red_dark"
+                    android:textColor="@color/text_red_dark"
                     android:textSize="36sp"
                     android:textStyle="bold" />
             </LinearLayout>

@@ -1,18 +1,17 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- 基础主题：Material 3 浅色主题，主色与文字均使用红色系。 -->
+    <!-- 基础主题：页面与控件使用中性灰，只有文字使用红色（学号尾号为 0）。 -->
     <style name="Base.Theme.ZhouYongQuan_Calculator" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/red_primary</item>
+        <item name="colorPrimary">@color/control_gray</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/red_surface</item>
-        <item name="colorOnPrimaryContainer">@color/red_dark</item>
-        <item name="colorSecondary">@color/red_primary</item>
+        <item name="colorSecondary">@color/control_gray</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/red_dark</item>
-        <item name="colorOnSurfaceVariant">@color/red_text</item>
-        <item name="colorOutline">@color/red_border</item>
-        <item name="android:colorBackground">@color/red_surface</item>
-        <item name="actionMenuTextColor">@color/red_dark</item>
+        <item name="colorOnSurface">@color/text_red_dark</item>
+        <item name="colorOnSurfaceVariant">@color/text_red_light</item>
+        <item name="colorOutline">@color/border_gray</item>
+        <item name="colorControlNormal">@color/icon_gray</item>
+        <item name="android:colorBackground">@color/page_background</item>
+        <item name="actionMenuTextColor">@color/text_red_dark</item>
     </style>
 
     <style name="Theme.ZhouYongQuan_Calculator" parent="Base.Theme.ZhouYongQuan_Calculator" />

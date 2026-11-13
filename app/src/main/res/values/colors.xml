@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 学号尾号为 0，界面文字统一使用红色系配色。 -->
+    <!-- 页面与控件使用中性色，只有文字使用红色（学号尾号为 0）。 -->
     <color name="white">#FFFFFFFF</color>
-    <color name="black">#FF000000</color>
-    <color name="red_primary">#FFD32F2F</color>
-    <color name="red_dark">#FFB71C1C</color>
-    <color name="red_text">#FFC62828</color>
-    <color name="red_hint">#FFE57373</color>
-    <color name="red_surface">#FFFFF4F4</color>
-    <color name="red_border">#FFEF9A9A</color>
+    <color name="page_background">#FFF5F5F5</color>
+    <color name="border_gray">#FFE0E0E0</color>
+    <color name="control_gray">#FF616161</color>
+    <color name="icon_gray">#FF424242</color>
+
+    <!-- 文字色：标题/结果用深红，正文用红，提示与时间用浅红。 -->
+    <color name="text_red_dark">#FFB71C1C</color>
+    <color name="text_red">#FFC62828</color>
+    <color name="text_red_light">#FFE57373</color>
 </resources>
